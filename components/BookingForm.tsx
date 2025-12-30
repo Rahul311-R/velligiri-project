@@ -97,7 +97,7 @@ export default function BookingForm() {
                     </div>
                     <h2 className="text-2xl font-bold text-green-800">Booking Confirmed!</h2>
                     <p className="text-muted-foreground">
-                        Thank you for booking your Velliangiri Hills guide. We will contact you shortly to confirm the details.
+                        Thank you for booking your Velligiri Hills guide. We will contact you shortly to confirm the details.
                     </p>
                     <Button
                         className="mt-4 bg-green-700 hover:bg-green-800"
@@ -118,20 +118,20 @@ export default function BookingForm() {
             <CardHeader>
                 <CardTitle className="text-2xl text-center text-green-900">Book Your Guide</CardTitle>
                 <CardDescription className="text-center text-green-700/80">
-                    Plan your spiritual journey to Velliangiri Hills
+                    Plan your spiritual journey to Velligiri Hills
                 </CardDescription>
             </CardHeader>
             <CardContent>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                     <div className="space-y-2">
                         <Label htmlFor="name" className="text-green-900">Full Name</Label>
-                        <Input id="name" placeholder="John Doe" {...register("name")} className="border-green-200 focus-visible:ring-green-500" />
+                        <Input id="name" placeholder="" {...register("name")} className="border-green-200 focus-visible:ring-green-500" />
                         {errors.name && <p className="text-red-500 text-xs">{errors.name.message}</p>}
                     </div>
 
                     <div className="space-y-2">
                         <Label htmlFor="phone" className="text-green-900">Phone Number</Label>
-                        <Input id="phone" placeholder="+91 98765 43210" {...register("phone")} className="border-green-200 focus-visible:ring-green-500" />
+                        <Input id="phone" placeholder="" {...register("phone")} className="border-green-200 focus-visible:ring-green-500" />
                         {errors.phone && <p className="text-red-500 text-xs">{errors.phone.message}</p>}
                     </div>
 
