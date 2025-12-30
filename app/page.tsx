@@ -298,6 +298,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW: Sacred Summit Section */}
+      <section id="the-summit" className="py-32 bg-white relative overflow-hidden">
+        <div className="container px-6 mx-auto">
+          <div className="flex flex-col lg:flex-row gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 space-y-8"
+            >
+              <div className="inline-block px-4 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-sm font-bold tracking-widest uppercase">
+                Step into Divinity
+              </div>
+              <h2 className="text-5xl md:text-7xl font-black text-neutral-900 leading-[1] tracking-tighter">
+                The Seventh Hill:<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-500 italic">
+                  Swami Mudi
+                </span>
+              </h2>
+              <p className="text-xl text-neutral-600 leading-relaxed font-medium">
+                At 6,000 feet, the summit of the seventh hill is a natural masterpiece. Here, three massive ancient boulders lean against each other to form a sacred cave—the eternal sanctum of the <span className="text-neutral-900 font-bold">Swayambhu Lingam</span>.
+              </p>
+
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "The Natural Sanctum",
+                    desc: "A 6-foot wide natural cave formed by massive wind-blown boulders, serving as the throne for Lord Shiva.",
+                    icon: MountainIcon
+                  },
+                  {
+                    title: "Pancha Lingas",
+                    desc: "The deity is worshipped in the form of five self-manifested stones (Swayambhu), representing the five elements of existence.",
+                    icon: ShieldCheck
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-5 p-6 rounded-[32px] bg-neutral-50 border border-neutral-100 group hover:bg-white hover:shadow-xl transition-all duration-500">
+                    <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                      <item.icon className="w-7 h-7 text-emerald-700" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-neutral-900 mb-1">{item.title}</h4>
+                      <p className="text-neutral-500 font-medium">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 relative"
+            >
+              <div className="absolute -inset-10 bg-emerald-500/5 blur-[120px] rounded-full" />
+
+              {/* Creative Visual: The Divine Cave */}
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-[40px] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div className="relative bg-neutral-900 aspect-video rounded-[36px] overflow-hidden shadow-2xl flex items-center justify-center group-hover:bg-black transition-colors duration-700">
+                  {/* CSS Based Lingam Representation */}
+                  <div className="absolute inset-0 opacity-40">
+                    <Image src="/temple_shrine.png" alt="Cave" fill className="object-cover brightness-[0.3]" />
+                  </div>
+                  <div className="relative z-10 flex flex-col items-center">
+                    <motion.div
+                      animate={{
+                        boxShadow: ["0 0 20px #10b981", "0 0 60px #10b981", "0 0 20px #10b981"],
+                        scale: [1, 1.05, 1]
+                      }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                      className="w-16 h-28 bg-gradient-to-b from-neutral-800 to-black rounded-t-full rounded-b-md border border-emerald-500/30 relative flex items-center justify-center"
+                    >
+                      <div className="absolute top-1/4 w-full h-px bg-emerald-500/20 blur-sm" />
+                      <div className="absolute top-1/2 w-full h-px bg-emerald-500/20 blur-sm" />
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full blur-[2px] animate-pulse" />
+                    </motion.div>
+                    <div className="mt-6 text-center">
+                      <p className="text-emerald-400 font-black text-xs tracking-[0.3em] uppercase opacity-70">Swayambhu Presence</p>
+                      <p className="text-white/40 text-[10px] uppercase font-bold mt-1">Self-Manifested Five Lingas</p>
+                    </div>
+                  </div>
+                  {/* Ambient Mist */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6 mt-8">
+                <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-xl border-4 border-white">
+                  <Image src="/steps_7th_hill.png" alt="Summit Path" fill className="object-cover" />
+                </div>
+                <div className="relative aspect-[4/3] rounded-[32px] overflow-hidden shadow-xl border-4 border-white">
+                  <Image src="/sunrise_view.png" alt="Summit View" fill className="object-cover" />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* NEW: Process Section */}
       <section id="process" className="py-32 bg-neutral-50 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
