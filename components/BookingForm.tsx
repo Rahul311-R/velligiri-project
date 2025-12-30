@@ -43,7 +43,7 @@ const timeSlots = [
     "11:00 AM", "12:00 PM", "01:00 PM", "02:00 PM", "03:00 PM", "04:00 PM",
 ]
 
-export function BookingForm() {
+export default function BookingForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
 
