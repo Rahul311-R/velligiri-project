@@ -99,3 +99,124 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* FullCalendar Custom Styles for Schedule Tab */
+.admin-calendar-container .fc {
+  font-family: inherit;
+}
+
+.admin-calendar-container .fc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.admin-calendar-container .fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-calendar-container .fc-button {
+  background: white !important;
+  border: 2px solid #e5e5e5 !important;
+  color: #171717 !important;
+  font-weight: 900 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 1rem !important;
+  transition: all 0.2s !important;
+  height: 3rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.admin-calendar-container .fc-button:hover {
+  background: #f5f5f5 !important;
+  border-color: #10b981 !important;
+  color: #10b981 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1) !important;
+}
+
+.admin-calendar-container .fc-button-active {
+  background: linear-gradient(to right, #059669, #10b981) !important;
+  border-color: #059669 !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2) !important;
+}
+
+.admin-calendar-container .fc-button-active:hover {
+  background: linear-gradient(to right, #047857, #059669) !important;
+  color: white !important;
+}
+
+.admin-calendar-container .fc-toolbar-title {
+  font-size: 1.875rem !important;
+  font-weight: 900 !important;
+  color: #171717 !important;
+  letter-spacing: -0.025em !important;
+  font-style: italic;
+}
+
+.admin-calendar-container .fc-daygrid-day-number {
+  font-weight: 900 !important;
+  font-size: 0.875rem !important;
+  color: #525252 !important;
+  padding: 0.5rem !important;
+}
+
+.admin-calendar-container .fc-col-header-cell {
+  background: #f5f5f5 !important;
+  border: none !important;
+  padding: 1rem 0.5rem !important;
+}
+
+.admin-calendar-container .fc-col-header-cell-cushion {
+  font-weight: 900 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  color: #737373 !important;
+}
+
+.admin-calendar-container .fc-daygrid-day {
+  border-color: #f5f5f5 !important;
+}
+
+.admin-calendar-container .fc-daygrid-day:hover {
+  background: #fafafa !important;
+}
+
+.admin-calendar-container .fc-event {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.25rem 0.5rem !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+}
+
+.admin-calendar-container .fc-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+.admin-calendar-container .fc-daygrid-day-top {
+  flex-direction: row !important;
+  justify-content: center !important;
+}
+
+.admin-calendar-container .fc-scrollgrid {
+  border-color: #f5f5f5 !important;
+  border-radius: 1.5rem !important;
+  overflow: hidden !important;
+}

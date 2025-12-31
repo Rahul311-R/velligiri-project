@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Lock, MountainIcon, ShieldCheck } from "lucide-react"
 import { motion } from "framer-motion"
+import NextImage from "next/image"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -48,10 +49,22 @@ export default function AdminLogin() {
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-[#f8fafc] overflow-hidden relative">
+            {/* Cinematic Background Image */}
+            <div className="absolute inset-0 z-0">
+                <NextImage
+                    src="/hero.png"
+                    alt="Velligiri Hills Background"
+                    fill
+                    className="object-cover brightness-[0.9] opacity-[0.25] grayscale"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#f8fafc]/50 via-[#f8fafc]/80 to-[#f8fafc]" />
+            </div>
+
             {/* Spiritual background glows */}
-            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-emerald-100/50 blur-[120px] rounded-full" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-orange-50/50 blur-[120px] rounded-full" />
+            <div className="absolute inset-0 z-1 overflow-hidden pointer-events-none">
+                <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-emerald-100/30 blur-[120px] rounded-full" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-orange-50/30 blur-[120px] rounded-full" />
             </div>
 
             <motion.div
